@@ -131,7 +131,7 @@ STATIC_URL = '/static/'
 
 
 # WSUDOR
-SESSION_COOKIE_NAME='wsudorauth'
+SESSION_COOKIE_NAME='WSUDOR'
 
 
 try:
