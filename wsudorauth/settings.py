@@ -121,6 +121,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+# WSUDOR
+SESSION_COOKIE_NAME='wsudorauth'
+
+
 try:
     from localsettings import *
 except ImportError:
