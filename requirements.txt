@@ -1,3 +1,4 @@
 django
 django-auth-ldap
+mysql-python
 python-ldap
