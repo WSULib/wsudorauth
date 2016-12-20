@@ -3,7 +3,7 @@
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="hidden" name="next" value="/next_url?dest={{ request.GET.next }}" />
+    <input type="hidden" name="next" value="/wsudorauth/next_url?dest={{ request.GET.next }}" />
     <button type="submit">Login</button>
   </form>
 {% endblock %}

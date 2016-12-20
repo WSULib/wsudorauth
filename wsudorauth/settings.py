@@ -26,6 +26,8 @@ SECRET_KEY = 'scq1cx*nmwmtemw09b(u(c&=uw1$x_k8n-phjg6y5+3&t+6@9w'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
     '192.168.42.5'
 ]
 
@@ -41,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
