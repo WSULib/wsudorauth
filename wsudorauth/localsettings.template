@@ -20,3 +20,21 @@ AUTH_LDAP_USER_ATTR_MAP = {
     'email': 'mail',
 }
 
+# overrides allowed IPs from settings.py
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '192.168.42.5'
+]
+
+# overrides db settings
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'wsudorauth',
+        'USER': 'USERNAME',
+        'PASSWORD': 'PASSWORD',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+    }
+}
