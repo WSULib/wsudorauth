@@ -21,8 +21,10 @@ from . import views
 
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
+
     url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
-    url(r'^logout/$', auth_views.logout, {'template_name': 'logout.html'}, name='logout'),
+    url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
+
 	url(r'^whoami/', views.whoami, name='whoami'),
 	url(r'^session_check/(?P<session_id>.*)', views.session_check, name='session_check'),
     url(r'^admin/', admin.site.urls),
