@@ -72,6 +72,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'wsudorauth.wsgi.application'
 
 

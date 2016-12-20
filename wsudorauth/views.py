@@ -1,4 +1,4 @@
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.contrib.sessions.models import Session
 from django.contrib.auth.models import User
 
@@ -62,4 +62,10 @@ def session_check(request, session_id=False):
 			'status':'false',
 			'message':'session id not provided'
 		}, status=400)
+
+
+def next_url(request):
+	url = request.GET.get('dest', '')
+	print "sending to %s" % url
+	return HttpResponseRedirect(url)
 
