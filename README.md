@@ -7,16 +7,16 @@ WSUDORauth uses a browser cookie named `WSUDOR` to note your session ID.
 
 ## API routes
 
-Note: when [deployed in Apache](https://github.com/WSULib/fedora-stack/blob/v2/install_scripts/wsudorauth.sh) via our [Fedora-Stack system build](https://github.com/WSULib/fedora-stack/tree/v2)
+Note: when [deployed in Apache](https://github.com/WSULib/fedora-stack/blob/v2/install_scripts/wsudorauth.sh) via our [Fedora-Stack system build](https://github.com/WSULib/fedora-stack/tree/v2), all routes include a `/wsudorauth` URL prefix.
 
-`/login?next=[URL]`
+`/wsudorauth/login?next=[URL]`
   * WSUDOR login screen
   * option `next` parameter that redirects after successful login
 
-`/logout`
+`/wsudorauth/logout`
   * faceless route that logouts, and redirects to `/login`
   
-`/whoami`
+`/wsudorauth/whoami`
   * returns information about currently logged in user, via `WSUDOR` browser cookie
   * sample response:<br>
   ```
@@ -29,7 +29,7 @@ Note: when [deployed in Apache](https://github.com/WSULib/fedora-stack/blob/v2/i
   }
   ```
   
-`/session_check`
+`/wsudorauth/session_check`
   * given an active, valid session id, returns the Access ID, first name, and last name of user, and `200` status code
   * given an invalid session id, returns response and `404` status code
   * no session id, `400` status code response returned
