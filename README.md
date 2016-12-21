@@ -18,3 +18,13 @@ Note: when [deployed in Apache](https://github.com/WSULib/fedora-stack/blob/v2/i
   
 `/whoami`
   * returns information about currently logged in user, via `WSUDOR` browser cookie
+  * sample response<br>
+  ```
+  {
+      username: "foobar",
+      first_name: "Foo",
+      last_name: "Bar",
+      session_check: "http://192.168.42.6/wsudorauth/session_check/qwertyuiopasdfghkj",
+      session_id: "qwertyuiopasdfghkj"
+  }
+  ```
