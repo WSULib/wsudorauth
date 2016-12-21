@@ -18,7 +18,7 @@ Note: when [deployed in Apache](https://github.com/WSULib/fedora-stack/blob/v2/i
   
 `/whoami`
   * returns information about currently logged in user, via `WSUDOR` browser cookie
-  * sample response<br>
+  * sample response:<br>
   ```
   {
       username: "foobar",
@@ -28,3 +28,17 @@ Note: when [deployed in Apache](https://github.com/WSULib/fedora-stack/blob/v2/i
       session_id: "qwertyuiopasdfghkj"
   }
   ```
+  
+  `/session_check`
+  * given an active, valid session id, returns the Access ID, first name, and last name of user, and `200` status code
+  * given an invalid session id, returns response and `404` status code
+  * no session id, `400` status code response returned
+  * sample response:<br>
+  ```
+  {
+      username: "foobar",
+      first_name: "Foo",
+      last_name: "Bar"
+  }
+  ```
+  
