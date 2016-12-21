@@ -11,6 +11,7 @@ Note: when [deployed in Apache](https://github.com/WSULib/fedora-stack/blob/v2/i
 
 `/wsudorauth/login?next=[URL]`
   * WSUDOR login screen
+  * creates session and sets `WSUDOR` cookie
   * option `next` parameter that redirects after successful login
 
 `/wsudorauth/logout`
