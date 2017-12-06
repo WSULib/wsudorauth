@@ -1,4 +1,4 @@
 python-ldap
 mysql-python
-django
+django==1.11.8
 django-auth-ldap
